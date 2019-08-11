@@ -1,3 +1,15 @@
+.App {
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-color: #fafafa;
+  background-image: url('./pokeballs.jpg');
+  background-size: cover;
+  padding: 4rem 20px 0;
+  margin-top: 50px;
+}
+
 body {
   font-family: sans-serif;
 }
@@ -15,7 +27,24 @@ nav a {
   margin: 1em;
 }
 
-form div {
-  margin: 1em;
-  display: inline-block;
+nav {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+
+a > .card {
+  box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.199);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+a > .card:hover {
+  box-shadow: 13px 13px 26px rgba(0, 0, 0, 0.657);
+  transform: scale(1.1);
+}
+
+#googleMap {
+  height: 100%;
+  width: 100%;
 }

@@ -3,7 +3,10 @@ import {connect} from 'react-redux'
 import {withRouter, Route, Switch} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import {Login, Signup, UserHome} from './components'
+import Pokemans from './components/pokemans'
+import SinglePoke from './components/pokemon/SinglePoke'
 import {me} from './store'
+import Map from './components/Maps'
 
 /**
  * COMPONENT
@@ -25,6 +28,10 @@ class Routes extends Component {
           <Switch>
             {/* Routes placed here are only available after logging in */}
             <Route path="/home" component={UserHome} />
+
+            <Route exact path="/pokemans" component={Pokemans} />
+            {<Route exact path="/pokemans/:id" component={SinglePoke} />}
+            {<Route exact path="/map" component={Map} />}
           </Switch>
         )}
         {/* Displays our Login component as a fallback */}

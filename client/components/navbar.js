@@ -3,15 +3,20 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {logout} from '../store'
+import styled from 'styled-components'
+
+const NavStyle = styled.nav
 
 const Navbar = ({handleClick, isLoggedIn}) => (
   <div>
-    <h1>Pokemon Go to the Polls</h1>
-    <nav>
+    <nav style={{backgroundColor: '#ef5350'}}>
+      <h1 style={{color: '#ffffff'}}>Pokemon Go to the Polls</h1>
       {isLoggedIn ? (
         <div>
           {/* The navbar will show these links after you log in */}
           <Link to="/home">Home</Link>
+          <Link to="/pokemans">Pokemon</Link>
+          <Link to="/map">Map</Link>
           <a href="#" onClick={handleClick}>
             Logout
           </a>
