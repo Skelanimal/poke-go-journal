@@ -80,6 +80,12 @@ const caughtMons = [
     pokemonId: 1,
     lat: 11.7831,
     long: -11.9712
+  },
+  {
+    userId: 1,
+    pokemonId: 1,
+    lat: 30.7831,
+    long: 30.9712
   }
 ]
 

@@ -5,8 +5,9 @@ import {composeWithDevTools} from 'redux-devtools-extension'
 import user from './user'
 import pokemans from './pokemon'
 import pokeman from './singlePokemon'
+import caught from './caughtMon'
 
-const reducer = combineReducers({user, pokemans, pokeman})
+const reducer = combineReducers({user, pokemans, pokeman, caught})
 const middleware = composeWithDevTools(
   applyMiddleware(thunkMiddleware, createLogger({collapsed: true}))
 )
@@ -16,3 +17,4 @@ export default store
 export * from './user'
 export * from './pokemon'
 export * from './singlePokemon'
+export * from './caughtMon'

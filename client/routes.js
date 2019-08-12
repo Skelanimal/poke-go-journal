@@ -7,6 +7,7 @@ import Pokemans from './components/pokemans'
 import SinglePoke from './components/pokemon/SinglePoke'
 import {me} from './store'
 import Map from './components/Maps'
+import caughtMon from './components/CaughtMon'
 
 /**
  * COMPONENT
@@ -32,6 +33,7 @@ class Routes extends Component {
             <Route exact path="/pokemans" component={Pokemans} />
             {<Route exact path="/pokemans/:id" component={SinglePoke} />}
             {<Route exact path="/map" component={Map} />}
+            {<Route exact path="/caught" component={caughtMon} />}
           </Switch>
         )}
         {/* Displays our Login component as a fallback */}

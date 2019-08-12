@@ -17,13 +17,11 @@ const CaughtMon = require('./caughtMon')
  */
 
 User.belongsToMany(Pokemon, {
-  through: {model: CaughtMon},
-  foreignKey: 'userId'
+  through: {model: CaughtMon, unique: false}
 })
 
 Pokemon.belongsToMany(User, {
-  through: {model: CaughtMon},
-  foreignKey: 'pokemonId'
+  through: {model: CaughtMon, unique: false}
 })
 
 module.exports = {
